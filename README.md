@@ -18,3 +18,8 @@ The chart below is a screenshot of the RabbitMQ Management UI, displaying a visi
 
 ![Monitoring chart based on publisher](static/images/spikes.png)
 
+# Simulation slow subscriber
+The chart below shows a spike in queued messages in RabbitMQ after running the publisher 10 times. Although each run was expected to send 5 messages (totalling 50), the total number of queued messages peaked at around 35 before gradually dropping to 0. This happened because not all messages were consumed immediately, some may have temporarily queued due to slight delays in the subscriber processing or RabbitMQ scheduling. The messages were eventually delivered and acknowledged, as shown by the Ready, Unacked, and Total counts dropping back to zero. This confirms that the queue handled the burst efficiently, and the subscriber successfully processed all events.
+
+![Simulation slow subscriber](static/images/slowpoke.png)
+
