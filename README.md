@@ -9,4 +9,7 @@ The identical AMQP URL (amqp://guest:guest@localhost:5672) in both the publisher
 ![Running RabbitMQ as message broker](static/images/rabbitmq.png)
 
 # Sending and processing event
+The image below shows the interaction between the publisher and the subscriber. When cargo run is executed in the publisher directory (right side), it sends five user_created events to the message broker (RabbitMQ). On the left side, the subscriber console shows the incoming messages being received and processed, each containing a UserCreatedEventMessage with different user IDs and names. This confirms that the subscriber is successfully consuming the events published by the publisher.
+
 ![Sending and processing event](static/images/connection.png)
+
