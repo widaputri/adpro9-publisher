@@ -13,3 +13,8 @@ The image below shows the interaction between the publisher and the subscriber. 
 
 ![Sending and processing event](static/images/connection.png)
 
+# Monitoring chart based on publisher
+The chart below is a screenshot of the RabbitMQ Management UI, displaying a visible spike in message rates on the second graph (messages published). This spike occurs every time the publisher is run using cargo run. Each run triggers the sending of five user_created events to the message broker, which results in a short burst of publishing activity. The spike clearly represents the burst of messages being sent by the publisher and confirms that RabbitMQ is actively receiving and routing the messages.
+
+![Monitoring chart based on publisher](static/images/spikes.png)
+
