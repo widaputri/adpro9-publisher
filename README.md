@@ -8,3 +8,5 @@ The identical AMQP URL (amqp://guest:guest@localhost:5672) in both the publisher
 # Running RabbitMQ as message broker
 ![Running RabbitMQ as message broker](static/images/rabbitmq.png)
 
+# Sending and processing event
+![Sending and processing event](static/images/connection.png)
